@@ -5,7 +5,7 @@ public class Task {
 
     public Task(String name, int urgency) {
         this.name = name;
-        this.urgency = 0;
+        this.urgency = urgency;
     }
 
     public Task(String name) {

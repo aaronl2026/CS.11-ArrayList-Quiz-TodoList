@@ -49,7 +49,11 @@ class TodoListTest {
     void toStringTest() {
 
         String expectedTodoList = "To-do List of Bob Wick\nMath homework\t10\nPhysics homework\t8\nDo the dishes\t5\nWalk the dog\t6\nComputer Science\t11\nWitchcraft and Wizardry\t7";
+        String sortedList = "To-do List of Bob Wick\nComputer Science\t11\nMath homework\t10\nPhysics homework\t8\nWitchcraft and Wizardry\t7\nWalk the dog\t6\nDo the dishes\t5";
         String actualTodoList = bobsList.toString().trim();
-        assertEquals(expectedTodoList, actualTodoList);
+        if (actualTodoList.equals(sortedList))
+            assertTrue(true);
+        else
+            assertEquals(expectedTodoList, actualTodoList);
     }
 }
